@@ -40,9 +40,9 @@
 
 }
 
- /*Buton link*/
+/*Buton link*/
 
-.happiness a{
+.happiness a {
   display: inline-block;
   text-decoration: none;
   background-color: #ffd700;
@@ -56,8 +56,8 @@
   margin-bottom: 10px;
 }
 
-.happiness a:hover{
-  background-color: #095bb5;
+.happiness a:hover {
+  background-color: #3a3932;
 }
 
 /*Desktop version*/
@@ -80,13 +80,13 @@
     max-width: 500px;
     font-size: 40px;
     margin-top: 50px;
-  
+
   }
 
   .happiness p {
     grid-column: 1;
     order: 2;
-    margin:0;
+    margin: 0;
     max-width: 500px;
     justify-content: left;
 
@@ -102,5 +102,11 @@
     border-radius: 70px;
     object-fit: cover;
     justify-self: end;
+  }
+
+  .happiness a {
+    order: 4;
+    max-width: fit-content;
+    justify-self: center;
   }
 }
