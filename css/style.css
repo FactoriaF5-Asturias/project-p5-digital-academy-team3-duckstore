@@ -40,7 +40,27 @@
 
 }
 
-/*Desktop vesrion*/
+ /*Buton link*/
+
+.happiness a{
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffd700;
+  color: #705E00;
+  padding: 14px 32px;
+  font-weight: 500;
+  border-radius: 50px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.happiness a:hover{
+  background-color: #095bb5;
+}
+
+/*Desktop version*/
 
 @media (min-width:1024px) {
   .happiness {
