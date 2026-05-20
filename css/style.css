@@ -12,8 +12,10 @@
 .happiness {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background-color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   margin: 5px;
 }
@@ -21,16 +23,14 @@
 .happiness h1 {
   font-family: "Montserrat";
   font-size: 26px;
-  align-items: center;
-  padding: 20px;
+  margin-bottom: 15px;
 }
 
 .happiness p {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 15px;
   line-height: 2;
-  align-items: center;
-  align-items: center;
+
 }
 
 .happiness img {
@@ -46,10 +46,10 @@
   .happiness {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 5px 40px;
+    align-items: left;
+    gap: 5px 20px;
     max-width: 1200px;
-    margin: 60px auto;
+    margin: 10px;
     padding: 0 20px;
 
   }
@@ -59,17 +59,19 @@
     order: 1;
     max-width: 500px;
     font-size: 40px;
-    margin-top: 50px;
-  
+    margin-top: 70px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
   }
 
   .happiness p {
     grid-column: 1;
     order: 2;
-    margin:0;
+    margin: 0;
     max-width: 500px;
-    justify-content: left;
-
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .happiness img {
