@@ -1,3 +1,16 @@
 @import url(./reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.h1 {
+
+    font-family:"Montserrat" ;
+    color: #1B1C1C;
+    font-size: 40px;
+    font-weight: 500;
+    align-items: center;
+}
+
+
