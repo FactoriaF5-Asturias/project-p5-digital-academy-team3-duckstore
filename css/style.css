@@ -70,8 +70,8 @@
     order: 2;
     margin: 0;
     max-width: 500px;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
   .happiness img {
