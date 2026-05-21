@@ -4,13 +4,20 @@
 
 
 
-.h1 {
-
+h1 {
     font-family:"Montserrat" ;
     color: #1B1C1C;
     font-size: 40px;
     font-weight: 500;
-    align-items: center;
+    text-align:center;
+
 }
 
+p {font-family: "Plus Jakarta Sans";
+    color: #4D4732;
+    font-size: 14px;
+    font-weight: 200;
+    text-align: center;
+
+}
 
