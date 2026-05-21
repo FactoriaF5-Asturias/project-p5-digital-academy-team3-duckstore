@@ -61,7 +61,7 @@ p {
     padding-top: 30px;
     padding-bottom: 30px;
     justify-self: stretch;
-margin-top: 10px;
+    margin-top: 10px;
 
 }
 
@@ -134,6 +134,7 @@ margin-top: 10px;
     display: grid;
     gap: 4px;
 }
+
 aside h2 {
     font-family: "Montserrat";
     color: #1B1C1C;
@@ -144,11 +145,12 @@ aside h2 {
     margin-top: 10px;
 }
 
- .store-info {
-    color:#705E00; 
-  font-size: 18px;
+.store-info {
+    color: #705E00;
+    font-size: 18px;
     font-weight: 600;
-margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
 
 aside p {
     font-family: "Plus Jakarta Sans";
@@ -157,21 +159,22 @@ aside p {
     font-weight: 200;
     text-align: left;
     margin-left: 20px;
-     margin-bottom: 0;
+    margin-bottom: 0;
 
 
 }
 
 
 .contact-map {
-    border-radius:20px;
-     width: 40%; 
-     margin-top: 10px;
-     display: block;
-      justify-self: center;
+    border-radius: 20px;
+    width: 20%;
+    margin-top: 10px;
+    display: block;
+    justify-self: center;
     margin-bottom: 0;
 
 }
+
 .desktop-social {
     display: none;
 }
@@ -210,15 +213,19 @@ aside p {
     }
 
     .desktop-social .social-list {
-           display: flex;
+        display: flex;
         justify-content: center;
         font-family: "Plus Jakarta Sans";
         color: #4D4732;
         font-size: 14px;
     }
 
+    .contact-map {
+        width: 40%;
+    }
 
 
-footer .social-list {
-    display: none;
+    footer .social-list {
+        display: none;
+    }
 }
