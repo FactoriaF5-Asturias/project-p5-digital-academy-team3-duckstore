@@ -49,17 +49,17 @@
 │   ├── product.html
 │   └── contact.html
 ├── img/
-│   ├── Catalog patos/
-│   ├── Collect happiness/
-├   ├── Curates Curiosities/
-│   ├── Contact/
-│   └── Wky Duckstore
+│   ├── catalog patos/
+│   ├── collect happiness/
+├   ├── curates curiosities/
+│   ├── contact/
+│   └── wky duckstore
 └── docs/
     └── assets/
+    ├── logo/
     └──  Icons/
+
     
-
-
 
 
 ## Toosl and software
