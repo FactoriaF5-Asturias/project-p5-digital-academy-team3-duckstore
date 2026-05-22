@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Header active link */
+
+body > header nav a:first-child {
+    color: #2D2D2D;
+}
+
+body > header nav a:nth-child(3) {
+    color: #7A6200;
+}
+
+body > header nav a:first-child::after {
+    display: none;
+}
+
+body > header nav a:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2.5px;
+    background-color: #705D00;
+    border-radius: 10px;
+}
 
 /*Mobile first*/
 
@@ -19,7 +43,7 @@ h1 {
     padding-bottom: 15px;
 }
 
-p {
+main > p {
     font-family: "Plus Jakarta Sans";
     color: #4D4732;
     font-size: 14px;
@@ -176,6 +200,29 @@ aside p {
 }
 
 .desktop-social {
+    display: block;
+    background-color: #FBF9F8;
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.desktop-social h3 {
+    font-family: "Montserrat";
+    color: #705D00;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.desktop-social .social-list {
+    display: flex;
+    justify-content: center;
+    font-family: "Plus Jakarta Sans";
+    color: #4D4732;
+    font-size: 14px;
+}
+
+footer .social-list {
     display: none;
 }
 
@@ -198,18 +245,11 @@ aside p {
     }
 
     .desktop-social {
-        display: block;
-        background-color: #FBF9F8;
         padding: 40px 60px;
-        text-align: center;
     }
 
     .desktop-social h3 {
-        font-family: "Montserrat";
-        color: #705D00;
         font-size: 24px;
-        font-weight: 600;
-        margin-bottom: 12px;
     }
 
     .desktop-social .social-list {
