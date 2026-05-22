@@ -23,7 +23,7 @@
 
 ## Wireframe
 
-- [Wireframe desktop and mobile version](docs/assets\Wireframe-DuckStore-desktop-mobile.pdf)
+- [Wireframe desktop and mobile version](https://www.figma.com/design/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=118-445&p=f&t=MosLVW0ySpPCvHi4-0)
 
 ## Mockups
 
@@ -34,13 +34,32 @@
 
 ## Project Structure
 
-│── index.html
-│── style.css          
-│── nav-header.css    
-│── footer.css         
-│── reset.css          
-│── /img
-│── /assets
+├── index.html
+├── README.md
+├── css/
+│   ├── reset.css
+│   ├── style.css
+│   ├── nav-header.css
+│   ├── footer.css
+│   ├── catalog.css
+│   ├── product.css
+│   └── contact.css
+├── pages/
+│   ├── catalog.html
+│   ├── product.html
+│   └── contact.html
+├── img/
+│   ├── Catalog patos/
+│   ├── Collect happiness/
+├   ├── Curates Curiosities/
+│   ├── Contact/
+│   └── Wky Duckstore
+└── docs/
+    └── assets/
+    └──  Icons/
+    
+
+
 
 
 ## Toosl and software
