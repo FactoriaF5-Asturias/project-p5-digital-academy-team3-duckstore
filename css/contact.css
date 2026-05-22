@@ -1,16 +1,231 @@
-@import url(./reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+/*Mobile first*/
 
-.h1 {
-
-    font-family:"Montserrat" ;
-    color: #1B1C1C;
-    font-size: 40px;
-    font-weight: 500;
-    align-items: center;
+main {
+    background-color: #F6F3F2;
 }
 
 
+h1 {
+    font-family: "Montserrat";
+    color: #705D00;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+p {
+    font-family: "Plus Jakarta Sans";
+    color: #4D4732;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 80px;
+
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background-color: #FBF9F8;
+    justify-items: center;
+}
+
+.contact-form {
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+    padding: 30px;
+    justify-self: center;
+    gap: 20px;
+
+}
+
+
+.contact-information {
+    display: grid;
+    gap: 2px;
+    background-color: #F6F3F2;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-self: stretch;
+    margin-top: 10px;
+
+}
+
+
+.contact-form div {
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+}
+
+.contact-form label {
+    font-family: "Plus Jakarta Sans";
+    color: #4D4732;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    width: 80%;
+}
+
+.contact-form input {
+    background-color: #FBF9F8;
+    color: #6B7280;
+    border-color: #f0ebe9;
+    height: 40px;
+    width: 80%;
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+
+
+}
+
+.contact-form textarea {
+    background-color: #FBF9F8;
+    color: #6B7280;
+    border-color: #f0ebe9;
+    border-radius: 6px;
+    height: 150px;
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.contact-form select {
+    font-size: 14px;
+    color: #1B1C1C;
+    background-color: #FBF9F8;
+    border-color: #f0ebe9;
+    height: 40px;
+    width: 80%;
+    border-radius: 6px;
+    justify-self: center;
+    padding: 5px;
+}
+
+.contact-form .btn-send {
+    background-color: #FFD43B;
+    color: #705E00;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 80%;
+    justify-self: center;
+}
+
+.contact-information div {
+    display: grid;
+    gap: 4px;
+}
+
+aside h2 {
+    font-family: "Montserrat";
+    color: #1B1C1C;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.store-info {
+    color: #705E00;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+aside p {
+    font-family: "Plus Jakarta Sans";
+    color: #4D4732;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0;
+
+
+}
+
+
+.contact-map {
+    border-radius: 20px;
+    width: 20%;
+    margin-top: 10px;
+    display: block;
+    justify-self: center;
+    margin-bottom: 0;
+
+}
+
+.desktop-social {
+    display: none;
+}
+
+/*Desktop version*/
+@media (min-width: 1024px) {
+
+    .contact-section {
+        grid-template-columns: 65% 30%;
+        gap: 10px;
+        align-items: start;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 10px 10px;
+        border-radius: 40px;
+    }
+
+
+    .contact-information {
+        border-radius: 40px;
+    }
+
+    .desktop-social {
+        display: block;
+        background-color: #FBF9F8;
+        padding: 40px 60px;
+        text-align: center;
+    }
+
+    .desktop-social h3 {
+        font-family: "Montserrat";
+        color: #705D00;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    .desktop-social .social-list {
+        display: flex;
+        justify-content: center;
+        font-family: "Plus Jakarta Sans";
+        color: #4D4732;
+        font-size: 14px;
+    }
+
+    .contact-map {
+        width: 40%;
+    }
+
+
+    footer .social-list {
+        display: none;
+    }
+}
