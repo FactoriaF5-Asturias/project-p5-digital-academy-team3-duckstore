@@ -1,0 +1,13 @@
+.cart-page {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 48px 16px 72px;
+}
+
+.cart-content h1 {
+    margin-bottom: 38px;
+    color: #1B1C1C;
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+}
