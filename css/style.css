@@ -422,3 +422,34 @@
     font-size: 24px;
   }
 }
+
+/* ─── Badge dinámico ──────────────────── */
+.catalog-card.is-new::after {
+    content: "New";
+    position: absolute;
+    top: 256px;
+    right: 16px;
+    
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+}
+
+.card img {
+    width: 100%;
+}
