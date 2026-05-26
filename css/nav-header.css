@@ -54,6 +54,12 @@ body > header nav a:first-child::after {
     border-radius: 10px;
 }
 
+.cart-icon img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
     body > header {
         padding: 24px 28px;
