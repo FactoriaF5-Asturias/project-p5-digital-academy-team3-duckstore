@@ -11,3 +11,40 @@
     font-size: 48px;
     font-weight: 800;
 }
+
+.cart-content {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 48px;
+    align-items: start;
+}
+
+.cart-items {
+    display: grid;
+    gap: 18px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 156px 1fr auto;
+    gap: 22px;
+    align-items: center;
+    position: relative;
+    padding: 18px 26px 18px 18px;
+    border-radius: 8px;
+    background-color: #FBF9F8;
+}
+
+.cart-item-image {
+    width: 156px;
+    height: 118px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.cart-summary {
+    padding: 32px;
+    border-radius: 8px;
+    background-color: #FBF9F8;
+}
+
