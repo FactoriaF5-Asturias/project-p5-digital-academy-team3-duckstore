@@ -19,7 +19,7 @@ console.log('postalInput')
 const stshippingInput = document.getElementById('stshipping')
 console.log('stshippingInput')
 
-const exshippingInput = document.getElementById('stshipping')
+const exshippingInput = document.getElementById('exshipping')
 console.log('exshippingInput')
 
 const cardNumberInput = document.getElementById('card-number')
@@ -34,6 +34,8 @@ console.log('cvcInput')
 const purchaseInput = document.getElementById('purchase')
 console.log('purchaseInput')
 
+const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []
+console.log(cartItems)
 
 fnameInput.addEventListener('input', () => {
     console.log('First name:', fnameInput.value)
@@ -80,18 +82,18 @@ cvcInput.addEventListener('input', () => {
 function validateForm() {
     console.log('validate form')
 
+
     const isFormValid =
         fnameInput.value.trim() !== '' &&
         lnameInput.value.trim() !== '' &&
         addressInput.value.trim() !== '' &&
         cityInput.value.trim() !== '' &&
         postalInput.value.trim() !== '' &&
+        (stshippingInput.checked || exshippingInput.checked) &&
         cardNumberInput.value.trim() !== '' &&
         expiryDateInput.value.trim() !== '' &&
         cvcInput.value.trim() !== ''
 
-
-    const isShippingSelected = stshippingInput.checked || exshippingInput.checked
     purchaseInput.disabled = !isFormValid
 }
 
@@ -107,3 +109,28 @@ stshippingInput.addEventListener('change', validateForm)
 exshippingInput.addEventListener('change', validateForm)
 
 
+//Collect data
+
+purchaseInput.addEventListener('click', () => {
+    const orderData = {
+        customer: {
+            fname: fnameInput.value.trim(),
+            lname: lnameInput.value.trim(),
+            address: addressInput.value.trim(),
+            city: cityInput.value.trim(),
+            postal: postalInput.value.trim(),
+        },
+        payment: {
+            cardNumber: cardNumberInput.value.trim(),
+            expiryDate: expiryDateInput.value.trim(),
+            cvc: cvcInput.value.trim(),
+        },
+        shipping: stshippingInput.checked ? 'standard' : exshippingInput.checked ? 'express' : '',
+        products: cartItems
+    }
+
+
+    localStorage.setItem('orderData', JSON.stringify(orderData))
+    console.log("Collected data:", orderData)
+    window.location.href = './review.html'
+})
