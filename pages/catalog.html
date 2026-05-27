@@ -36,11 +36,44 @@
             </div>
 
             <!-- Product cards -->
+            <div class="catalog-layout">
+                <aside class="catalog-filters" id="catalog-filters">
+                    <h2>Categories</h2>
+                    <p>Find your perfect quack</p>
 
-            <div class="catalog-grid" id="catalog-grid"> <!-- Dejar este div vacio. Añadir el id= => poder capturarlo desde JavaScript -->
-                         
+                    <button class="filter-button is-active" type="button" data-filter="All Ducks">
+                        <img src="../docs/assets/icons/All-Ducks.png" alt="">
+                        All Ducks
+                    </button>
+
+                    <button class="filter-button" type="button" data-filter="Classic Ducks">
+                        <img src="../docs/assets/icons/Classic-ducks.png" alt="">
+                        Classic Ducks
+                    </button>
+
+                    <button class="filter-button" type="button" data-filter="Special Edition">
+                        <img src="../docs/assets/icons/Special-edition.png" alt="">
+                        Special Edition
+                    </button>
+
+                    <button class="filter-button" type="button" data-filter="Professional">
+                        <img src="../docs/assets/icons/Professional.png" alt="">
+                        Professional
+                    </button>
+
+                    <button class="filter-button" type="button" data-filter="Fantasy">
+                        <img src="../docs/assets/icons/Fantasy.png" alt="">
+                        Fantasy
+                    </button>
+
+                    <div class="collector-choice">
+                        <strong>Collector's Choice</strong>
+                        <small>Free shipping on orders over $50</small>
+                    </div>
+                </aside>
+
+                <div class="catalog-grid" id="catalog-grid"></div>
             </div>
-
         </section>
     </main>
 
