@@ -43,7 +43,7 @@
       }
     }
 
-    // ── FUNCIÓN 2: validar y guardar ──
+    // ── FUNCIÓN 2: validar y guardar ──────────────────────
     function guardarDireccion() {
 
       // Lista de campos obligatorios: [id del input, id del mensaje de error]
@@ -97,9 +97,7 @@
       cerrarFormulario()
     }
 
-    // ════════════════════════════════
-    //  CATÁLOGO Y CARRITO
-    // ════════════════════════════════
+    // ── CATÁLOGO Y CARRITO ──────────────────────
 
     // ── Todos los productos de la tienda ──
     const catalogo = [
@@ -120,22 +118,22 @@
       { ...catalogo[1], qty: 1 },
     ]
 
-    // ── Renderizar el carrito ──
+    // ── Renderizar el carrito ──────────────────────
     // Esta función borra y redibuja toda la lista cada vez que algo cambia
     function renderizarCarrito() {
       const lista  = document.getElementById('listaCarrito')
       const vacio  = document.getElementById('carritoVacio')
       const titulo = document.getElementById('tituloResumen')
 
-      // Calculamos cuántos artículos hay en total (sumando cantidades)
+      // ── Calculamos cuántos artículos hay en total (sumando cantidades) ──────────────────────
       const totalItems = carrito.reduce(function(suma, item) {
         return suma + item.qty
       }, 0)
 
-      // Actualizamos el título
+      // ── Actualizamos el título ──────────────────────
       titulo.textContent = 'Order Summary (' + totalItems + ' Item' + (totalItems !== 1 ? 's' : '') + ')'
 
-      // Si el carrito está vacío mostramos el mensaje
+      // ── Si el carrito está vacío mostramos el mensaje ──────────────────────
       if (carrito.length === 0) {
         lista.innerHTML = ''
         vacio.style.display = ''
@@ -190,7 +188,7 @@
     
     }
 
-    // ── Cambiar cantidad ──
+    // ── Cambiar cantidad ──────────────────────
     function cambiarCantidad(id, delta) {
       const item = carrito.find(function(i) { return i.id === id })
       if (!item) return
@@ -198,13 +196,13 @@
       renderizarCarrito()
     }
 
-    // ── Eliminar item ──
+    // ── Eliminar item ──────────────────────
     function eliminarItem(id) {
       carrito = carrito.filter(function(i) { return i.id !== id })
       renderizarCarrito()
     }
 
-    // ── Abrir y cerrar el modal ──
+    // ── Abrir y cerrar el modal ──────────────────────
     function abrirCatalogo() {
       document.getElementById('buscarCatalogo').value = ''
       renderizarCatalogo('')
@@ -215,16 +213,16 @@
       document.getElementById('modalCatalogo').classList.remove('abierto')
     }
 
-    // Cerrar al hacer clic fuera del modal
+    // Cerrar al hacer clic fuera del modal ──────────────────────
     document.getElementById('modalCatalogo').addEventListener('click', function(e) {
       if (e.target === this) cerrarCatalogo()
     })
 
-    // ── Renderizar el catálogo dentro del modal ──
+    // ── Renderizar el catálogo dentro del modal ──────────────────────
     function renderizarCatalogo(filtro) {
       const cuerpo = document.getElementById('cuerpoCatalogo')
 
-      // Filtramos por nombre o colección
+      // Filtramos por nombre o colección ──────────────────────
       const resultados = catalogo.filter(function(p) {
         return p.nombre.toLowerCase().includes(filtro.toLowerCase())
             || p.coleccion.toLowerCase().includes(filtro.toLowerCase())
@@ -254,7 +252,7 @@
       }).join('')
     }
 
-    // ── Añadir o quitar del carrito desde el catálogo ──
+    // ── Añadir o quitar del carrito desde el catálogo ──────────────────────
     function toggleCarrito(id) {
       const producto      = catalogo.find(function(p) { return p.id === id })
       const yaEnCarrito   = carrito.find(function(i) { return i.id === id })
@@ -272,11 +270,11 @@
       renderizarCatalogo(document.getElementById('buscarCatalogo').value)
     }
 
-    // ── Inicializar la página ──
+    // ── Inicializar la página ──────────────────────
     // Llamamos a renderizar cuando carga la página por primera vez
     renderizarCarrito()
 
-    // ── FUNCIÓN 3: actualizar lo que se ve ──
+    // ── FUNCIÓN 3: actualizar lo que se ve ──────────────────────
     function actualizarVista() {
       document.getElementById('addrNombre').textContent  = direccion.nombre + ' ' + direccion.apellido
       document.getElementById('addrCalle').textContent   = direccion.calle
@@ -287,7 +285,7 @@
       document.getElementById('addrPais').textContent    = direccion.pais
     }
 
-    // ── FUNCIÓN 4: cancelar sin guardar ──
+    // ── FUNCIÓN 4: cancelar sin guardar ──────────────────────
     function cancelarDireccion() {
       // Limpiamos los errores
       document.querySelectorAll('.campo-error').forEach(function(el) {
@@ -299,18 +297,16 @@
       cerrarFormulario()
     }
 
-    // ── FUNCIÓN 5: cerrar el formulario (usada por guardar y cancelar) ──
+    // ── FUNCIÓN 5: cerrar el formulario (usada por guardar y cancelar) ──────────────────────
     function cerrarFormulario() {
       document.getElementById('addrFormulario').classList.remove('abierto')
       document.getElementById('addrVista').style.display = ''
       document.getElementById('btnEditAddr').textContent = 'Edit'
     }
 
-    // ════════════════════════════════
-    //  ORDER TOTAL
-    // ════════════════════════════════
+    // ── ORDER TOTAL ──────────────────────
 
-    // Variables de estado del total
+    // Variables de estado del total ──────────────────────
     let costoEnvio    = 0
     let descuento     = 0      // porcentaje: 0.10 = 10%
     let promoAplicada = ''
@@ -321,7 +317,7 @@
       'SAVE15':  0.15,   // 15% de descuento
     }
 
-    // ── Calcular y mostrar el total ──
+    // ── Calcular y mostrar el total ──────────────────────
     function recalcularTotal() {
       // 1. Subtotal: sumamos precio × cantidad de cada item
       const subtotal = carrito.reduce(function(suma, item) {
@@ -362,7 +358,7 @@
       }
     }
 
-    // ── Seleccionar velocidad de envío ──
+    // ── Seleccionar velocidad de envío ──────────────────────
     function seleccionarEnvio(elemento, costo, etiqueta) {
       // Quitamos la clase seleccionado a todas las opciones
       document.querySelectorAll('.speed-opt').forEach(function(el) {
@@ -375,7 +371,7 @@
       recalcularTotal()
     }
 
-    // ── Aplicar código promocional ──
+    // ── Aplicar código promocional ──────────────────────
     function aplicarPromo() {
       const codigo  = document.getElementById('codigoPromo').value.trim().toUpperCase()
       const mensaje = document.getElementById('mensajePromo')
@@ -393,7 +389,7 @@
       }
     }
 
-    // ── Realizar pedido ──
+    // ── Realizar pedido ──────────────────────
     function realizarPedido() {
       const errores = []
 
