@@ -31,6 +31,10 @@ console.log('expiryDateInput')
 const cvcInput = document.getElementById('cvc')
 console.log('cvcInput')
 
+const purchaseInput = document.getElementById('purchase')
+console.log('purchaseInput')
+
+
 fnameInput.addEventListener('input', () => {
     console.log('First name:', fnameInput.value)
 })
@@ -69,3 +73,37 @@ expiryDateInput.addEventListener('input', () => {
 cvcInput.addEventListener('input', () => {
     console.log('CVC:', cvcInput.value)
 })
+
+//Validate form
+
+
+function validateForm() {
+    console.log('validate form')
+
+    const isFormValid =
+        fnameInput.value.trim() !== '' &&
+        lnameInput.value.trim() !== '' &&
+        addressInput.value.trim() !== '' &&
+        cityInput.value.trim() !== '' &&
+        postalInput.value.trim() !== '' &&
+        cardNumberInput.value.trim() !== '' &&
+        expiryDateInput.value.trim() !== '' &&
+        cvcInput.value.trim() !== ''
+
+
+    const isShippingSelected = stshippingInput.checked || exshippingInput.checked
+    purchaseInput.disabled = !isFormValid
+}
+
+fnameInput.addEventListener('input', validateForm)
+lnameInput.addEventListener('input', validateForm)
+addressInput.addEventListener('input', validateForm)
+cityInput.addEventListener('input', validateForm)
+postalInput.addEventListener('input', validateForm)
+cardNumberInput.addEventListener('input', validateForm)
+expiryDateInput.addEventListener('input', validateForm)
+cvcInput.addEventListener('input', validateForm)
+stshippingInput.addEventListener('change', validateForm)
+exshippingInput.addEventListener('change', validateForm)
+
+
