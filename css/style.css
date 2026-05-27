@@ -432,11 +432,6 @@
     
 }
 
-body {
-    font-family: sans-serif;
-    padding: 20px;
-}
-
 #catalogo {
     display: flex;
     flex-wrap: wrap;
