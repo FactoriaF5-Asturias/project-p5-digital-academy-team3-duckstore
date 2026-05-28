@@ -110,8 +110,12 @@ cartItemsContainer.addEventListener("click", event => {
         item.cantidad += 1;
     }
 
-    if (action === "decrease" && item && item.cantidad > 1) {
+    if (action === "decrease" && item) {
+    if (item.cantidad > 1) {
         item.cantidad -= 1;
+    } else {
+        cartItems = cartItems.filter(product => product.id !== id);
+    }
     }
 
     if (action === "remove") {
