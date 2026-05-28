@@ -1,0 +1,50 @@
+    /* ── TARJETA BASE ────────────────────── */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+
+    /* ── Cabecera de cada tarjeta: título + botón Edit ────────────────────── */
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .card-header h3 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ── Botón "Edit" ────────────────────── */
+    .edit-btn {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--yellow);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .edit-btn:hover { text-decoration: underline; }
+
+    /* ── Fila de dos tarjetas arriba ────────────────────── */
+    .top-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .top-row .card { margin-bottom: 0; }
+
+    /* ── Línea divisoria dentro de tarjeta ────────────────────── */
+    .card-divider {
+      border: none;
+      border-top: 1px solid #EBEBEB;
+      margin: 14px 0;
+    }
+
+    
