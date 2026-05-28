@@ -132,5 +132,5 @@ purchaseInput.addEventListener('click', () => {
 
     localStorage.setItem('orderData', JSON.stringify(orderData))
     console.log("Collected data:", orderData)
-    window.location.href = './review.html'
+    window.location.href = './order-review.html'
 })
