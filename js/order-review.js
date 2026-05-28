@@ -13,6 +13,11 @@
       telefono: ''
     }
 
+    // Variables de estado del total ──────────────────────
+    let costoEnvio    = 0
+    let descuento     = 0      // porcentaje: 0.10 = 10%
+    let promoAplicada = ''
+
     // ── FUNCIÓN 1: abrir y cerrar el formulario ──
     function toggleFormulario() {
       const formulario = document.getElementById('addrFormulario')
@@ -305,11 +310,6 @@
     }
 
     // ── ORDER TOTAL ──────────────────────
-
-    // Variables de estado del total ──────────────────────
-    let costoEnvio    = 0
-    let descuento     = 0      // porcentaje: 0.10 = 10%
-    let promoAplicada = ''
 
     const CODIGOS_PROMO = {
       'DUCK10':  0.10,   // 10% de descuento
