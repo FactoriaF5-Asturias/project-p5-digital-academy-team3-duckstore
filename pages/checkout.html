@@ -4,77 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to your DuckStore</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/catalog.css">
+    <title>Checkout DuckStore</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/nav-header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+
 </head>
 
 <body>
     <header>
-        <a href="../index.html">
+        <a href="./index.html">
             <span>DuckStore</span>
             <img src="../docs/assets/logo/logo.png" alt="Duck Store logo" />
         </a>
 
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="./catalog.html">Catalog</a>
-            <a href="./contact.html">Contact</a>
-            <a href="./cart.html" class="cart-icon">
-               <img src="../docs/assets/icons/Shopping-cart.png" alt="Shopping cart">
+            <a href="./index.html">Home</a>
+            <a href="./pages/catalog.html">Catalog</a>
+            <a href="./pages/contact.html">Contact</a>
+            <a> <img src="../docs/assets/icons/Shopping-cart.png" alt="shopping cart icon">
             </a>
-
         </nav>
     </header>
 
     <main>
-        <section class="catalog">
 
-            <div class="catalog-intro">
-                <h1>The Catalog</h1>
-                <p>Discover our curated collection of artisanal rubber ducks, designed for the discerning collector.</p>
-            </div>
+        <h1>Secure Checkout</h1>
+        <p>Complete your order of curated whimsy</p>
 
-            <!-- Product cards -->
-            <div class="catalog-layout">
-                <aside class="catalog-filters" id="catalog-filters">
-                    <h2>Categories</h2>
-                    <p>Find your perfect quack</p>
 
-                    <button class="filter-button is-active" type="button" data-filter="All Ducks">
-                        <img src="../docs/assets/icons/All-Ducks.png" alt="">
-                        All Ducks
-                    </button>
+        <section class="checkout">
 
-                    <button class="filter-button" type="button" data-filter="Classic Ducks">
-                        <img src="../docs/assets/icons/Classic-ducks.png" alt="">
-                        Classic Ducks
-                    </button>
+            <article class="checkout-address">
+                <div>
+                    <h2><span class="checkout-number">
+                            1</span>Shipping Address</h2>
+                </div>
+                <div>
+                    <form class="checkout-address-form">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" required placeholder="Arthur">
 
-                    <button class="filter-button" type="button" data-filter="Special Edition">
-                        <img src="../docs/assets/icons/Special-edition.png" alt="">
-                        Special Edition
-                    </button>
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" required placeholder="Quackson">
 
-                    <button class="filter-button" type="button" data-filter="Professional">
-                        <img src="../docs/assets/icons/Professional.png" alt="">
-                        Professional
-                    </button>
+                        <label for="address">Address Line 1</label>
+                        <input type="text " id="address" name="address" required placeholder="123 Puddles Lane">
 
-                    <button class="filter-button" type="button" data-filter="Fantasy">
-                        <img src="../docs/assets/icons/Fantasy.png" alt="">
-                        Fantasy
-                    </button>
+                        <label for="city">City</label>
+                        <input type="text " id="city" name="city" required placeholder="Bathsville">
 
-                    <div class="collector-choice">
-                        <strong>Collector's Choice</strong>
-                        <small>Free shipping on orders over $50</small>
-                    </div>
-                </aside>
+                        <label for="postal">Postal Code</label>
+                        <input type="text " id="postal" name="postal" required placeholder="D06K12">
 
-                <div class="catalog-grid" id="catalog-grid"></div>
-            </div>
+                    </form>
+                </div>
+            </article>
+
+            <article class="checkout-shipping">
+                <div>
+                    <h2><span class="checkout-number">2</span>Shipping Method</h2>
+                </div>
+                <div>
+                    <form class="shipping-method">
+                        <label>
+                            <input type="radio" id="stshipping" name="shipping-method" checked>
+
+                            <strong>Standard Waddle</strong>
+                            <small>3-5 Business Days</small>
+                            <span>Free</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="exshipping" name="shipping-method">
+
+                            <strong>Express Flight</strong>
+                            <small>1-2 Business Day</small>
+                            <span>$12.00</span>
+                        </label>
+                    </form>
+                </div>
+            </article>
+
+            <article class="checkout-payment">
+                <div>
+                    <h2><span class="checkout-number">3</span>Payment Information</h2>
+                </div>
+
+                <div>
+                    <form class="payment-form">
+                        <div class="card-field">
+                            <input type="text" id="card-number" name="card-number" placeholder="Card Number">
+                            <img src="../docs/assets/icons/Visa.png" alt="Visa">
+                        </div>
+
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+
+                        <input type="text" id="cvc" name="cvc" placeholder="CVC">
+                    </form>
+                </div>
+            </article>
+
+            <article class="order-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal (2 items)</span>
+                    <strong>$24.99</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <strong>$12.50</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Estimated Tax</span>
+                    <strong>$10.40</strong>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong>$66.89</strong>
+                </div>
+
+                <div class="summary-images">
+                    <img src="../img/catalog patos/pato2.png" alt="Galactic Explorer Duck">
+                    <img src="../img/catalog patos/pato3.png" alt="Chef Ducky">
+                </div>
+            </article>
+            <button class="purchase" id="purchase">
+                Complete Purchase</button>
+            <h3 class="secure-text">Secured by SSl Encryption</h3>
+
         </section>
+
+
     </main>
 
     <footer>
@@ -110,12 +178,9 @@
                     </svg>
                 </a>
             </li>
-
         </ul>
     </footer>
-
-<script type="module" src="../js/script.js"></script>
-
+    <script src="../js/checkout.js"></script>
 </body>
 
 </html>

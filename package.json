@@ -1,0 +1,31 @@
+{
+  "name": "duckstore-new",
+  "version": "1.0.0",
+  "description": "* The pages must be static and will not have interactive functionalities. Only HTML5 and CSS3 must be used\r * The website MUST feature a landing page explaining the business's purpose\r * The website MUST feature a catalog page for all rubber ducks on sale, including at least a name, image, and price\r * The website MUST feature a contact page with the physical store location and a contact button allowing users to send an email\r * The website MUST feature a detail page for at least one rubber duck, including at least a name, image, description, price, and stock quantity",
+  "homepage": "https://github.com/FactoriaF5-Asturias/project-p5-digital-academy-team3-duckstore#readme",
+  "bugs": {
+    "url": "https://github.com/FactoriaF5-Asturias/project-p5-digital-academy-team3-duckstore/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FactoriaF5-Asturias/project-p5-digital-academy-team3-duckstore.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "sass": "sass ./src/sass/styles.scss ./src/css/styles.css",
+    "sass-w": "sass --watch ./src/sass/styles.scss ./src/css/styles.css"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "sass": "^1.100.0",
+    "vitest": "^4.1.7"
+  }
+}

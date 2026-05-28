@@ -26,7 +26,7 @@ body > header nav a:nth-child(2)::after {
 /* Catalog layout */
 
 .catalog {
-    max-width: 1140px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 48px 16px 72px;
 }
@@ -58,9 +58,9 @@ body > header nav a:nth-child(2)::after {
 .catalog-grid {
     display: grid;
     grid-template-columns: repeat(3, 316px);
-    justify-content: center;
+    justify-content: start;
     gap: 32px;
-    padding: 48px 40px;
+    padding: 0;
     background-color: #FFFFFF;
 }
 
@@ -82,7 +82,7 @@ body > header nav a:nth-child(2)::after {
     object-fit: cover;
 }
 
-.catalog-card:nth-child(2) img {
+.galactic-card img {
     object-position: center top;
 }
 
@@ -134,11 +134,11 @@ body > header nav a:nth-child(2)::after {
 
 /* New product badge */
 
-.catalog-card:first-child {
+.catalog-card.new-card {
     position: relative;
 }
 
-.catalog-card:first-child::after {
+.catalog-card.new-card::after {
     content: "New";
     position: absolute;
     top: 256px;
@@ -151,6 +151,88 @@ body > header nav a:nth-child(2)::after {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 12px;
     font-weight: 700;
+}
+
+.catalog-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 14px 32px rgba(34, 34, 34, 0.06);
+}
+
+.catalog-filters h2 {
+    margin: 0;
+    color: #705D00;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.catalog-filters p {
+    margin: 0 0 12px;
+    color: #636451;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background-color: transparent;
+    color: #1B1C1C;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+}
+
+.filter-button img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.filter-button:hover,
+.filter-button.is-active {
+    background-color: #FFD700;
+    color: #705D00;
+}
+
+.collector-choice {
+    display: grid;
+    gap: 6px;
+    margin-top: 28px;
+    padding: 20px 14px;
+    border-radius: 8px;
+    background-color: #FFF7C6;
+    color: #705D00;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+}
+
+.collector-choice strong {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.collector-choice small {
+    font-size: 10px;
+}
+
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 36px;
+    align-items: start;
 }
 
 /* Tablet */
@@ -197,6 +279,21 @@ body > header nav a:nth-child(2)::after {
         margin-top: 30px;
         gap: 12px;
     }
+
+     .catalog-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .catalog-filters {
+        max-width: 664px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .catalog-grid {
+        justify-content: center;
+    }
 }
 
 /* Small tablet */
@@ -211,6 +308,10 @@ body > header nav a:nth-child(2)::after {
     .catalog-grid {
         grid-template-columns: 1fr;
         justify-items: center;
+    }
+
+    .catalog-filters {
+        max-width: 316px;
     }
 }
 
@@ -285,5 +386,17 @@ body > header nav a:nth-child(2)::after {
     .catalog-card-footer a {
         padding: 8px 14px;
         font-size: 11px;
+    }
+      .catalog-filters {
+        padding: 18px;
+    }
+
+    .filter-button {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+
+    .collector-choice {
+        margin-top: 18px;
     }
 }
