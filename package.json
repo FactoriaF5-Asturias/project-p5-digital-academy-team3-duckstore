@@ -23,6 +23,8 @@
     "sass-w": "sass --watch ./src/sass/styles.scss ./src/css/styles.css"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
     "sass": "^1.100.0",
     "vitest": "^4.1.7"
   }
