@@ -18,7 +18,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "vitest run",
+    "test": "playwright test",
+    "test:unit": "vitest run",
     "sass": "sass ./src/sass/styles.scss ./src/css/styles.css",
     "sass-w": "sass --watch ./src/sass/styles.scss ./src/css/styles.css"
   },
