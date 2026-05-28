@@ -29,6 +29,7 @@ body > header nav a:nth-child(2)::after {
     max-width: 1280px;
     margin: 0 auto;
     padding: 48px 16px 72px;
+    box-sizing: border-box;
 }
 
 /* Catalog intro */
@@ -57,9 +58,9 @@ body > header nav a:nth-child(2)::after {
 
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(3, 316px);
-    justify-content: start;
-    gap: 32px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    gap: 28px;
     padding: 0;
     background-color: #FFFFFF;
 }
@@ -67,7 +68,8 @@ body > header nav a:nth-child(2)::after {
 /* Product card */
 
 .catalog-card {
-    width: 316px;
+    width: 100%;
+    max-width: 316px;
     height: 437px;
     overflow: hidden;
     border-radius: 8px;
