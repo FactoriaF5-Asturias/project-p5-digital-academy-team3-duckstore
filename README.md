@@ -1,10 +1,5 @@
-![alt text](image.png)
-
-<div align="center">
-  <img src="url-de-la-imagen.jpg" width="100%">
-</div>
-
-
+![Wallpaper de patitos de goma](/docs/assets/Readme/rubber-duck-readme.jpg)
+  
 # DuckStore 🦆
 
 ## DuckStore is going to launch its products and has asked us to build their website. Our work will consist of creating the low-fidelity wireframes and the mockups using Figma and Stitch, and then developing the website with HTML5 and CSS3
@@ -72,9 +67,9 @@
 
 ## Mockups 🎨
 
-- [Mockups desktop](https://www.figma.com/proto/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=0-1&t=Un00D7PPe4Y0bZiO-1)
+- [Mockups desktop] (https://www.figma.com/design/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=0-1&p=f&t=aqCKdOI0Bf0WRxrl-0)
 
-- [Mockups mobile](https://www.figma.com/proto/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=128-1129&t=KcW6t3n4Dnquf1sP-1)
+- [Mockups mobile] (https://www.figma.com/design/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=864-3441&t=HrE3ficuMPCNRZmK-1)
 
 
 ## Project Structure 📁
@@ -144,24 +139,24 @@
 - **Montserrat(semibold, bold)** 
 
 
-## Testing 🧪
+## Test e2e con Playwright 🧪
 
 * Test performed on the cart page:
 
-https://github.com/FactoriaF5-Asturias/project-p5-digital-academy-team3-duckstore/blob/main/tests/cart.spec.js
+![Test web](/docs/assets/Readme/test1.PNG)
 
 
 * Basic test performed on the web site:
 
-https://github.com/FactoriaF5-Asturias/project-p5-digital-academy-team3-duckstore/blob/main/tests/example.spec.js
+![Test web](/docs/assets/Readme/test2.PNG)
 
 
 ## Project Developers 
 
-- 👩 Ioana
+- 👩 [Ioana](https://github.com/Alexapop)
 
-- 👱‍♀️ Hanna
+- 👱‍♀️ [Hanna](https://github.com/hannafr14)
 
-- 🧑 Jose Javier
+- 🧑 [Jose Javier](https://github.com/JawiCoder)
 
 
