@@ -1,43 +1,91 @@
-# DuckStore
+![alt text](image.png)
+
+<div align="center">
+  <img src="url-de-la-imagen.jpg" width="100%">
+</div>
+
+
+# DuckStore 🦆
 
 ## DuckStore is going to launch its products and has asked us to build their website. Our work will consist of creating the low-fidelity wireframes and the mockups using Figma and Stitch, and then developing the website with HTML5 and CSS3
 
-## Functional Requirements
+## Functional Requirements ✅
 
-* The pages must be static and will not have interactive functionalities. Only HTML5 and CSS3 must be used
-* The website MUST feature a landing page explaining the business's purpose
-* The website MUST feature a catalog page for all rubber ducks on sale, including at least a name, image, and price
-* The website MUST feature a contact page with the physical store location and a contact button allowing users to send an email
-* The website MUST feature a detail page for at least one rubber duck, including at least a name, image, description, price, and stock quantity
+* The catalog of all the ducks must be consumed and rendered from an array of objects.
+
+* The website debe have filters by category (minimum 3).
+
+* The website must allow the user to select the ducks they want to buy and add them to a shopping cart.
+
+* The website must allow the user to specify the quantity of each duck.
+
+* The website must allow the user to decrease the quantity of each duck.
+
+* The website must remove items from the shopping cart when the selected quantity is 0.
+
+* The website must display the subtotal for each duck in the shopping cart, based on the selected quantity.
+
+* The website must display the total of all selected products in the shopping cart.
+
+* The website must allow the user to remove products from the shopping cart.
+
+* The website must allow the user to proceed to payment, which will display a receipt with the details of the products and prices. 
+
+* The website must allow payment, which will return a successful purchase message (no payment gateway or credit card information should be entered; this will be fictitious).
+
+* The website must allow users to leave a message via the contact form (the entered information will be collected in a console.log file).
+
+* The website must not allow adding the same item to the shopping cart twice.
+ 
+* The website must not allow users to decrease the quantity by negative values.
 
 
-## Non Functional Requirements
+## Non Functional Requirements ☑️
 
-* Low-fidelity wireframes MUST be created to help structure the project
-* Mockups MUST be created to help visualize the final page design along with its user flow (prototype)
-* A semantic HTML5 structure MUST be implemented according to the mockups
-* Accessibility guidelines MUST be applied
-* Styling MUST be applied using CSS3 to exactly match the mockups
-* CSS3 animations and transitions MUST be utilized.
-* The website MUST be responsive.The website MUST be deployed live on GitHub Pages
+* Mockups of new pages must be created to help visualize how the page should look with its user flow (prototype).
 
-## Wireframe
+* The semantic HTML5 structure must be implemented according to the mockups.
+
+* The CSS must be modularized and use variables.
+
+* Accessibility principles must be applied.
+
+* Styling with CSS3 must be applied to match the mockups exactly.
+
+* CSS3 animations and transitions must be used.
+
+* Try to use ECMAScript 6 functionalities (map, filter, sort, reduce, forEach). Use only template strings; avoid using the old variable and string concatenation.
+
+* Use ESModules to import and export files while maintaining modularity.
+
+* Git and GitHub must be used as version control systems under the Gitflow methodology.
+
+* It must be responsive. At least one unit test for a feature is required (using Vitest as the test library).
+
+* At least one end-to-end test with Playwright is required.
+
+* Product deployed on GitHub Pages.
+
+## Wireframe ✏️
 
 - [Wireframe desktop and mobile version](https://www.figma.com/design/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=118-445&p=f&t=MosLVW0ySpPCvHi4-0)
 
-## Mockups
+## Mockups 🎨
 
 - [Mockups desktop](https://www.figma.com/proto/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=0-1&t=Un00D7PPe4Y0bZiO-1)
 
 - [Mockups mobile](https://www.figma.com/proto/kbVcU0fq6IzW5I7otljLbQ/DuckStore?node-id=128-1129&t=KcW6t3n4Dnquf1sP-1)
 
 
-## Project Structure
+## Project Structure 📁
 
 ├── index.html
 ├── README.md
 ├── css/
 │   ├── reset.css
+    ├── cart.css
+    ├── checkout.css
+    ├── order-review.css
 │   ├── style.css
 │   ├── nav-header.css
 │   ├── footer.css
@@ -46,6 +94,9 @@
 │   └── contact.css
 ├── pages/
 │   ├── catalog.html
+    ├── cart.html
+    ├── checkout.html
+    ├── order-review.html
 │   ├── product.html
 │   └── contact.html
 ├── img/
@@ -53,30 +104,64 @@
 │   ├── collect happiness/
 ├   ├── curates curiosities/
 │   ├── contact/
-│   └── wky duckstore
-└── docs/
-    └── assets/
+│   ├── wky duckstore/
+│   └── test/
+├── js/
+    ├── cart.js
+    ├── catalog-data.js
+    ├── catalog-filter.js
+    ├── checkout.js
+    ├── order-review.js
+    ├── product.js
+    ├── script.js
+ 
+│── docs/
+    └── icons/
     ├── logo/
-    └──  Icons/
+    └── user flow/
+│── test/
+    ├── playwright/
+    ├── vitest/
 
-    
-
-
-## Toosl and software
+## Toosl and software 🔧
 
 - **Figma**
 - **Jira**
 - **Visual Studio**
+- **Vitest**
 
-## Technologies
+## Technologies 💻
 - **HTML5**
 - **CSS3**
-- **Flexbox**
+- **JAVASCRIPT**
 
 
-## Typography 
+## Typography 🔠
 
 * The project uses the following fonts:
 
 - **Plus Jakarta Sans(regular, semibold)**   
 - **Montserrat(semibold, bold)** 
+
+
+## Testing 🧪
+
+* Test performed on the cart page:
+
+https://github.com/FactoriaF5-Asturias/project-p5-digital-academy-team3-duckstore/blob/main/tests/cart.spec.js
+
+
+* Basic test performed on the web site:
+
+https://github.com/FactoriaF5-Asturias/project-p5-digital-academy-team3-duckstore/blob/main/tests/example.spec.js
+
+
+## Project Developers 
+
+- 👩 Ioana
+
+- 👱‍♀️ Hanna
+
+- 🧑 Jose Javier
+
+
